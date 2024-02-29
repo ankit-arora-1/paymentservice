@@ -48,6 +48,11 @@
             <artifactId>razorpay-java</artifactId>
             <version>1.4.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.stripe</groupId>
+            <artifactId>stripe-java</artifactId>
+            <version>24.17.0</version>
+        </dependency>
     </dependencies>
 
     <build>

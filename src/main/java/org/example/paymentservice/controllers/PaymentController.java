@@ -1,5 +1,6 @@
 package org.example.paymentservice.controllers;
 
+import org.example.paymentservice.services.PaymentService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,8 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/payments")
 public class PaymentController {
 
+    private PaymentService paymentService;
+
+    public PaymentController(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
     @PostMapping
     public String initiatePayment() {
-        return null;
+        return paymentService.initiatePayment();
     }
 }
